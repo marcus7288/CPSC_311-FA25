@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 Day 1 - Introduction to Systems Development Environment</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .eu-logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #fbbf24;
+        }
+        .course-title {
+            font-size: 28px;
+            margin: 0;
+            font-weight: 300;
+        }
+        .day-title {
+            font-size: 20px;
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+        }
+        .content-section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #3b82f6;
+        }
+        .section-title {
+            color: #1e3a8a;
+            font-size: 24px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+        .learning-objectives {
+            background: #f0f9ff;
+            border: 1px solid #0ea5e9;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .objectives-list {
+            list-style: none;
+            padding: 0;
+        }
+        .objectives-list li {
+            margin: 10px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        .objectives-list li:before {
+            content: "🎯";
+            position: absolute;
+            left: 0;
+        }
+        .activity-box {
+            background: #f9fafb;
+            border: 2px solid #d1d5db;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .activity-title {
+            color: #7c3aed;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .time-indicator {
+            background: #fbbf24;
+            color: #1f2937;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .resource-links {
+            background: #ecfdf5;
+            border-left: 4px solid #10b981;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin: 5px 10px 5px 0;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+        }
+        .btn-secondary {
+            background: #6b7280;
+        }
+        .btn-secondary:hover {
+            background: #4b5563;
+        }
+        .assignment-highlight {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .nav-buttons {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+        }
+        .definition-box {
+            background: #f8fafc;
+            border-left: 4px solid #0ea5e9;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .definition-term {
+            font-weight: bold;
+            color: #1e40af;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="eu-logo">EVANGEL UNIVERSITY</div>
+        <h1 class="course-title">Systems Analysis and Design</h1>
+        <div class="day-title">Week 1, Day 1: Introduction to Systems Development Environment</div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">📚 Today's Learning Focus</h2>
+        <div class="learning-objectives">
+            <h3 style="color: #0ea5e9; margin-top: 0;">Learning Objectives</h3>
+            <ul class="objectives-list">
+                <li>Define what constitutes a system and an information system</li>
+                <li>Identify the key characteristics of information systems</li>
+                <li>Explain the role of systems analysts in modern organizations</li>
+                <li>Describe the components of the systems development environment</li>
+                <li>Analyze personal and organizational systems in your daily life</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">📖 Pre-Class Preparation</h2>
+        <div class="time-indicator">⏱️ 45 minutes</div>
+        
+        <h3>Required Reading</h3>
+        <p><strong>Textbook:</strong> Modern Systems Analysis and Design, Chapter 1 (Pages 27-36)</p>
+        <p><strong>Focus Areas:</strong></p>
+        <ul>
+            <li>Definition of systems and information systems</li>
+            <li>Characteristics of systems</li>
+            <li>Types of information systems</li>
+            <li>The role of systems analysts</li>
+        </ul>
+
+        <div class="resource-links">
+            <h4>📎 Supplementary Resources</h4>
+            <a href="https://codesandbox.io/s/systems-inventory-template-eu" class="btn" target="_blank">Personal Systems Inventory Template</a>
+            <a href="#" class="btn btn-secondary">Systems Thinking Video (12 min)</a>
+        </div>
+
+        <div class="assignment-highlight">
+            <h4>🏠 Pre-Class Assignment: Personal Systems Inventory</h4>
+            <p><strong>Due:</strong> Before class begins</p>
+            <p>Complete a personal inventory of the information systems you interact with daily. Use the provided CodeSandbox template to document at least 10 systems, categorizing them by type and describing their purpose.</p>
+            <a href="https://codesandbox.io/s/personal-systems-inventory-eu" class="btn" target="_blank">Access Template</a>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">🎯 In-Class Activities</h2>
+        <div class="time-indicator">⏱️ 75 minutes</div>
+
+        <div class="activity-box">
+            <div class="activity-title">Opening Discussion (10 minutes)</div>
+            <p>Share findings from your personal systems inventory. What patterns did you notice? Which systems are most critical to your daily operations?</p>
+        </div>
+
+        <div class="activity-box">
+            <div class="activity-title">Concept Exploration: What is a System? (20 minutes)</div>
+            <div class="definition-box">
+                <div class="definition-term">System</div>
+                <p>A collection of interrelated components that work together toward a common goal or purpose.</p>
+            </div>
+            <div class="definition-box">
+                <div class="definition-term">Information System</div>
+                <p>A combination of hardware, software, data, networks, and people that organizations use to collect, process, store, and disseminate information.</p>
+            </div>
+            <p><strong>Interactive Exercise:</strong> In small groups, identify and analyze the university's course registration system using the characteristics of systems.</p>
+        </div>
+
+        <div class="activity-box">
+            <div class="activity-title">Systems Analyst Role Exploration (25 minutes)</div>
+            <p>Explore the multifaceted role of systems analysts through case study analysis:</p>
+            <ul>
+                <li><strong>Technical Skills:</strong> Programming, database design, system architecture</li>
+                <li><strong>Analytical Skills:</strong> Problem solving, logical thinking, attention to detail</li>
+                <li><strong>Communication Skills:</strong> User interviewing, documentation, presentation</li>
+                <li><strong>Management Skills:</strong> Project coordination, team leadership, time management</li>
+            </ul>
+            <a href="https://codesandbox.io/s/analyst-skills-assessment-eu" class="btn" target="_blank">Skills Assessment Tool</a>
+        </div>
+
+        <div class="activity-box">
+            <div class="activity-title">Real-World Systems Analysis (20 minutes)</div>
+            <p>Analyze Evangel University's student information system as a class:</p>
+            <ul>
+                <li>What are the system's inputs, processes, and outputs?</li>
+                <li>Who are the stakeholders?</li>
+                <li>What challenges might exist in this system?</li>
+                <li>How might we improve it?</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">📝 Post-Class Assignment</h2>
+        <div class="assignment-highlight">
+            <h4>Assignment 1.1: Personal Systems Analysis</h4>
+            <p><strong>Due:</strong> Day 2 (before next class)</p>
+            <p><strong>Points:</strong> 25</p>
+            
+            <p>Building on your pre-class inventory, conduct a detailed analysis of one information system you use regularly. Your analysis should include:</p>
+            
+            <h5>Required Components:</h5>
+            <ul>
+                <li><strong>System Description:</strong> Purpose, users, and context</li>
+                <li><strong>System Characteristics:</strong> Inputs, processes, outputs, feedback</li>
+                <li><strong>Stakeholder Analysis:</strong> Who uses it? Who manages it?</li>
+                <li><strong>Strengths and Weaknesses:</strong> What works well? What could be improved?</li>
+                <li><strong>Improvement Recommendations:</strong> Specific suggestions for enhancement</li>
+            </ul>
+
+            <h5>Submission Requirements:</h5>
+            <ul>
+                <li>2-3 pages, double-spaced</li>
+                <li>Use professional formatting</li>
+                <li>Include a system diagram (hand-drawn or digital)</li>
+                <li>Submit via Canvas by 11:59 PM</li>
+            </ul>
+
+            <a href="https://codesandbox.io/s/system-analysis-template-eu" class="btn" target="_blank">Analysis Template</a>
+            <a href="#" class="btn btn-secondary">Submission Guidelines</a>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">🔍 Knowledge Check</h2>
+        <div class="activity-box">
+            <p>Before leaving class, complete this brief self-assessment:</p>
+            <ol>
+                <li>Can you define a system in your own words?</li>
+                <li>What are the five key characteristics of information systems?</li>
+                <li>Name three skills essential for systems analysts.</li>
+                <li>How do information systems differ from other types of systems?</li>
+                <li>What questions would you ask to analyze any information system?</li>
+            </ol>
+            <a href="https://codesandbox.io/s/day1-knowledge-check-eu" class="btn" target="_blank">Interactive Knowledge Check</a>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">🔗 Looking Ahead</h2>
+        <div class="resource-links">
+            <h4>Next Class Preview: SDLC Phases and Methodologies</h4>
+            <p>We'll explore the Systems Development Life Cycle (SDLC) and compare different development methodologies including traditional waterfall and agile approaches.</p>
+            
+            <p><strong>Prepare for Day 2:</strong></p>
+            <ul>
+                <li>Complete Assignment 1.1</li>
+                <li>Read Chapter 1, pages 37-46</li>
+                <li>Review SDLC phases handout (provided in Canvas)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="nav-buttons">
+        <a href="#" class="btn btn-secondary">← Course Home</a>
+        <a href="#" class="btn">Day 2: SDLC and Methodologies →</a>
+    </div>
+
+    <div class="content-section" style="text-align: center; color: #6b7280; font-size: 14px;">
+        <p>Evangel University | Systems Analysis and Design | Week 1, Day 1</p>
+        <p>Questions? Contact your instructor during office hours or via Canvas messaging.</p>
+    </div>
+</body>
+</html>

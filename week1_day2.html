@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 Day 2 - SDLC Phases and Methodologies</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .eu-logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #fbbf24;
+        }
+        .course-title {
+            font-size: 28px;
+            margin: 0;
+            font-weight: 300;
+        }
+        .day-title {
+            font-size: 20px;
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+        }
+        .content-section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #3b82f6;
+        }
+        .section-title {
+            color: #1e3a8a;
+            font-size: 24px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+        .learning-objectives {
+            background: #f0f9ff;
+            border: 1px solid #0ea5e9;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .objectives-list {
+            list-style: none;
+            padding: 0;
+        }
+        .objectives-list li {
+            margin: 10px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        .objectives-list li:before {
+            content: "🎯";
+            position: absolute;
+            left: 0;
+        }
+        .activity-box {
+            background: #f9fafb;
+            border: 2px solid #d1d5db;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .activity-title {
+            color: #7c3aed;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .time-indicator {
+            background: #fbbf24;
+            color: #1f2937;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .resource-links {
+            background: #ecfdf5;
+            border-left: 4px solid #10b981;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin: 5px 10px 5px 0;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+        }
+        .btn-secondary {
+            background: #6b7280;
+        }
+        .btn-secondary:hover {
+            background: #4b5563;
+        }
+        .assignment-highlight {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .nav-buttons {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+        }
+        .phase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .phase-card {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+        .phase-title {
+            color: #1e40af;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .methodology-comparison {
+            background: #f1f5f9;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        .comparison-table th,
+        .comparison-table td {
+            border: 1px solid #d1d5db;
+            padding: 12px;
+            text-align: left;
+        }
+        .comparison-table th {
+            background: #374151;
+            color: white;
+        }
+        .comparison-table tr:nth-child(even) {
+            background: #f9fafb;
+        }
+        .definition-box {
+            background: #f8fafc;
+            border-left: 4px solid #0ea5e9;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .definition-term {
+            font-weight: bold;
+            color: #1e40af;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="eu-logo">EVANGEL UNIVERSITY</div>
+        <h1 class="course-title">Systems Analysis and Design</h1>
+        <div class="day-title">Week 1, Day 2: SDLC Phases and Methodologies</div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">📚 Today's Learning Focus</h2>
+        <div class="learning-objectives">
+            <h3 style="color: #0ea5e9; margin-top: 0;">Learning Objectives</h3>
+            <ul class="objectives-list">
+                <li>Identify and describe the five phases of the Systems Development Life Cycle (SDLC)</li>
+                <li>Compare traditional waterfall methodology with agile development approaches</li>
+                <li>Analyze the advantages and disadvantages of different development methodologies</li>
+                <li>Select appropriate methodologies for different project scenarios</li>
+                <li>Apply SDLC concepts to real-world development situations</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">📖 Pre-Class Preparation</h2>
+        <div class="time-indicator">⏱️ 40 minutes</div>
+        
+        <h3>Required Reading</h3>
+        <p><strong>Textbook:</strong> Modern Systems Analysis and Design, Chapter 1 (Pages 37-46)</p>
+        <p><strong>Focus Areas:</strong></p>
+        <ul>
+            <li>The five phases of SDLC</li>
+            <li>Traditional development methodologies</li>
+            <li>Agile and iterative approaches</li>
+            <li>Methodology selection criteria</li>
+        </ul>
+
+        <div class="resource-links">
+            <h4>📎 Supplementary Resources</h4>
+            <a href="https://codesandbox.io/s/sdlc-phases-interactive-eu" class="btn" target="_blank">Interactive SDLC Explorer</a>
+            <a href="#" class="btn btn-secondary">Agile vs Waterfall Video (15 min)</a>
+        </div>
+
+        <div class="assignment-highlight">
+            <h4>✅ Check Assignment 1.1 Submission</h4>
+            <p>Ensure your Personal Systems Analysis assignment was submitted by 11:59 PM last night. Late submissions will receive a 10% penalty per day.</p>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">🔄 The Systems Development Life Cycle (SDLC)</h2>
+        
+        <div class="definition-box">
+            <div class="definition-term">Systems Development Life Cycle (SDLC)</div>
+            <p>A structured approach to developing information systems that guides project teams through a series of predefined phases, each with specific activities, deliverables, and milestones.</p>
+        </div>
+
+        <div class="phase-grid">
+            <div class="phase-card">
+                <div class="phase-title">1. Planning</div>
+                <p>Identify system needs, assess feasibility, and develop project plans</p>
+            </div>
+            <div class="phase-card">
+                <div class="phase-title">2. Analysis</div>
+                <p>Gather requirements, understand current systems, and define system specifications</p>
+            </div>
+            <div class="phase-card">
+                <div class="phase-title">3. Design</div>
+                <p>Create system architecture, user interfaces, and detailed technical specifications</p>
+            </div>
+            <div class="phase-card">
+                <div class="phase-title">4. Implementation</div>
+                <p>Build, test, and deploy the system to production environment</p>
+            </div>
+            <div class="phase-card">
+                <div class="phase-title">5. Maintenance</div>
+                <p>Support, enhance, and adapt the system throughout its operational life</p>
+            </div>
+        </div>
+
+        <a href="https://codesandbox.io/s/sdlc-phase-details-eu" class="btn" target="_blank">Explore Phase Details</a>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">🎯 In-Class Activities</h2>
+        <div class="time-indicator">⏱️ 75 minutes</div>
+
+        <div class="activity-box">
+            <div class="activity-title">SDLC Phase Mapping Exercise (20 minutes)</div>
+            <p>Working in pairs, map the activities of developing a mobile app for Evangel University's campus dining services to the five SDLC phases. What specific activities would occur in each phase?</p>
+            <a href="https://codesandbox.io/s/sdlc-mapping-exercise-eu" class="btn" target="_blank">Digital Mapping Tool</a>
+        </div>
+
+        <div class="activity-box">
+            <div class="activity-title">Methodology Comparison Workshop (30 minutes)</div>
+            <div class="methodology-comparison">
+                <h4>Traditional vs. Agile Development</h4>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Aspect</th>
+                            <th>Traditional (Waterfall)</th>
+                            <th>Agile</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Planning Approach</td>
+                            <td>Extensive upfront planning</td>
+                            <td>Adaptive planning throughout</td>
+                        </tr>
+                        <tr>
+                            <td>Requirements</td>
+                            <td>Fixed early in project</td>
+                            <td>Evolve based on feedback</td>
+                        </tr>
+                        <tr>
+                            <td>Development Cycles</td>
+                            <td>Single, sequential cycle</td>
+                            <td>Multiple, iterative cycles</td>
+                        </tr>
+                        <tr>
+                            <td>Customer Involvement</td>
+                            <td>Limited to specific phases</td>
+                            <td>Continuous throughout project</td>
+                        </tr>
+                        <tr>
+                            <td>Change Management</td>
+                            <td>Difficult and expensive</td>
+                            <td>Expected and accommodated</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p><strong>Discussion Questions:</strong></p>
+            <ul>
+                <li>When might waterfall be more appropriate than agile?</li>
+                <li>What are the risks of each approach?</li>
+                <li>How do team size and project complexity affect methodology choice?</li>
+            </ul>
+        </div>
+
+        <div class="activity-box">
+            <div class="activity-title">Methodology Selection Debate (25 minutes)</div>
+            <p>Teams will be assigned scenarios and must argue for their recommended methodology:</p>
+            <ul>
+                <li><strong>Scenario A:</strong> Government contract for military logistics system</li>
+                <li><strong>Scenario B:</strong> Startup developing social media platform</li>
+                <li><strong>Scenario C:</strong> Bank upgrading core financial systems</li>
+                <li><strong>Scenario D:</strong> University developing student portal</li>
+            </ul>
+            <a href="https://codesandbox.io/s/methodology-decision-tool-eu" class="btn" target="_blank">Decision Support Tool</a>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">📝 Post-Class Assignment</h2>
+        <div class="assignment-highlight">
+            <h4>Assignment 1.2: Methodology Selection Case Study</h4>
+            <p><strong>Due:</strong> End of Week 1 (Friday, 11:59 PM)</p>
+            <p><strong>Points:</strong> 30</p>
+            
+            <p>You've been hired as a consultant to help Pine Valley Furniture Company select an appropriate development methodology for their new e-commerce system. Analyze the situation and provide a recommendation.</p>
+            
+            <h5>Case Background:</h5>
+            <ul>
+                <li>Company: Traditional furniture manufacturer expanding online</li>
+                <li>Timeline: 18-month project deadline</li>
+                <li>Budget: $2.5 million with limited flexibility</li>
+                <li>Team: Mix of internal IT staff and external contractors</li>
+                <li>Requirements: Integration with existing systems, mobile-responsive design</li>
+                <li>Stakeholders: Executive team, sales staff, customers, IT department</li>
+            </ul>
+
+            <h5>Required Analysis:</h5>
+            <ol>
+                <li><strong>Methodology Evaluation:</strong> Compare at least 3 different approaches</li>
+                <li><strong>Risk Assessment:</strong> Identify risks for each methodology</li>
+                <li><strong>Recommendation:</strong> Select and justify your chosen approach</li>
+                <li><strong>Implementation Plan:</strong> High-level timeline and milestones</li>
+                <li><strong>Success Metrics:</strong> How will you measure project success?</li>
+            </ol>
+
+            <h5>Deliverables:</h5>
+            <ul>
+                <li>3-4 page written analysis</li>
+                <li>Comparison matrix (can be table or chart)</li>
+                <li>High-level project timeline</li>
+                <li>Professional presentation format</li>
+            </ul>
+
+            <a href="https://codesandbox.io/s/case-study-template-eu" class="btn" target="_blank">Case Study Template</a>
+            <a href="#" class="btn btn-secondary">Grading Rubric</a>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">🔍 Knowledge Check</h2>
+        <div class="activity-box">
+            <p>Test your understanding with these key questions:</p>
+            <ol>
+                <li>What are the five phases of the SDLC and their primary purposes?</li>
+                <li>Compare waterfall and agile methodologies in terms of flexibility and control.</li>
+                <li>What factors should influence methodology selection for a project?</li>
+                <li>How do iterative and incremental development approaches differ?</li>
+                <li>What are the advantages and disadvantages of having user involvement throughout development?</li>
+            </ol>
+            <a href="https://codesandbox.io/s/day2-knowledge-assessment-eu" class="btn" target="_blank">Interactive Assessment</a>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">🔗 Looking Ahead</h2>
+        <div class="resource-links">
+            <h4>Next Class Preview: Real-World Systems Analysis and Team Formation</h4>
+            <p>We'll apply our knowledge to analyze real systems, explore systems failures, and form teams for the semester capstone project.</p>
+            
+            <p><strong>Prepare for Day 3:</strong></p>
+            <ul>
+                <li>Research one major IT project failure (be ready to discuss)</li>
+                <li>Review Pine Valley Furniture case study materials</li>
+                <li>Think about potential team members and project ideas</li>
+                <li>Continue working on Assignment 1.2</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="nav-buttons">
+        <a href="#" class="btn btn-secondary">← Day 1: Introduction</a>
+        <a href="#" class="btn">Day 3: Real-World Analysis →</a>
+    </div>
+
+    <div class="content-section" style="text-align: center; color: #6b7280; font-size: 14px;">
+        <p>Evangel University | Systems Analysis and Design | Week 1, Day 2</p>
+        <p>Questions? Contact your instructor during office hours or via Canvas messaging.</p>
+    </div>
+</body>
+</html>

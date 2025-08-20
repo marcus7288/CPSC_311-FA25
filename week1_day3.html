@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 Day 3 - Real-World Systems Analysis and Team Formation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .eu-logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #fbbf24;
+        }
+        .course-title {
+            font-size: 28px;
+            margin: 0;
+            font-weight: 300;
+        }
+        .day-title {
+            font-size: 20px;
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+        }
+        .content-section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #3b82f6;
+        }
+        .section-title {
+            color: #1e3a8a;
+            font-size: 24px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+        .learning-objectives {
+            background: #f0f9ff;
+            border: 1px solid #0ea5e9;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .objectives-list {
+            list-style: none;
+            padding: 0;
+        }
+        .objectives-list li {
+            margin: 10px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        .objectives-list li:before {
+            content: "🎯";
+            position: absolute;
+            left: 0;
+        }
+        .activity-box {
+            background: #f9fafb;
+            border: 2px solid #d1d5db;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .activity-title {
+            color: #7c3aed;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .time-indicator {
+            background: #fbbf24;
+            color: #1f2937;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .resource-links {
+            background: #ecfdf5;
+            border-left: 4px solid #10b981;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin: 5px 10px 5px 0;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+        }
+        .btn-secondary {
+            background: #6b7280;
+        }
+        .btn-secondary:hover {
+            background: #4b5563;
+        }
+        .btn-success {
+            background: #10b981;
+        }
+        .btn-success:hover {
+            background: #059669;
+        }
+        .assignment-highlight {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .team-formation {
+            background: #ede9fe;
+            border: 2px solid #8b5cf6;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .nav-buttons {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+        }
+        .case-study {
+            background: #f1f5f9;
+            border-left: 4px solid #3b82f6;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .failure-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .failure-card {
+            background: #fef2f2;
+            border: 2px solid #f87171;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        .failure-title {
+            color: #dc2626;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .success-factors {
+            background: #f0fdf4;
+            border: 2px solid #22c55e;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .capstone-preview {
+            background: #fefce8;
+            border: 2px solid #eab308;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="eu-logo">EVANGEL UNIVERSITY</div>
+        <h1 class="course-title">Systems Analysis and Design</h1>
+        <div class="day-title">Week 1, Day 3: Real-World Systems Analysis and Team Formation</div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">📚 Today's Learning Focus</h2>
+        <div class="learning-objectives">
+            <h3 style="color: #0ea5e9; margin-top: 0;">Learning Objectives</h3>
+            <ul class="objectives-list">
+                <li>Analyze real-world systems using course concepts and terminology</li>
+                <li>Identify common causes of systems development project failures</li>
+                <li>Evaluate success factors for systems development projects</li>
+                <li>Form effective project teams for the semester capstone project</li>
+                <li>Develop initial project ideas and team charters</li>
+                <li>Apply systems thinking to complex organizational scenarios</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">📖 Pre-Class Preparation Review</h2>
+        <div class="time-indicator">⏱️ Check Preparation</div>
+        
+        <h3>What You Should Have Ready:</h3>
+        <ul>
+            <li>✅ One major IT project failure researched and ready to discuss</li>
+            <li>✅ Pine Valley Furniture case study materials reviewed</li>
+            <li>✅ Initial thoughts on potential team members and project ideas</li>
+            <li>✅ Assignment 1.2 progress (due end of week)</li>
+        </ul>
+
+        <div class="resource-links">
+            <h4>📎 Today's Resources</h4>
+            <a href="https://codesandbox.io/s/team-formation-tool-eu" class="btn" target="_blank">Team Formation Platform</a>
+            <a href="https://codesandbox.io/s/project-idea-generator-eu" class="btn btn-secondary" target="_blank">Project Idea Generator</a>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">💥 Learning from Systems Failures</h2>
+        
+        <div class="failure-examples">
+            <div class="failure-card">
+                <div class="failure-title">Healthcare.gov Launch (2013)</div>
+                <p><strong>Issue:</strong> Website crashes, security concerns, poor user experience</p>
+                <p><strong>Lessons:</strong> Importance of testing, user-centered design, scalable architecture</p>
+            </div>
+            <div class="failure-card">
+                <div class="failure-title">Berlin Airport System (2008-2020)</div>
+                <p><strong>Issue:</strong> 12-year delay, €7 billion over budget</p>
+                <p><strong>Lessons:</strong> Scope creep, poor project management, integration challenges</p>
+            </div>
+            <div class="failure-card">
+                <div class="failure-title">FBI Virtual Case File (2001-2005)</div>
+                <p><strong>Issue:</strong> $170 million project scrapped</p>
+                <p><strong>Lessons:</strong> Changing requirements, lack of user involvement, technical complexity</p>
+            </div>
+        </div>
+
+        <div class="success-factors">
+            <h4>🎯 Key Success Factors</h4>
+            <ul>
+                <li><strong>Clear Requirements:</strong> Well-defined, stable, and user-validated requirements</li>
+                <li><strong>Strong Leadership:</strong> Executive support and skilled project management</li>
+                <li><strong>User Involvement:</strong> Continuous stakeholder engagement and feedback</li>
+                <li><strong>Realistic Planning:</strong> Achievable timelines and budgets with contingencies</li>
+                <li><strong>Quality Assurance:</strong> Comprehensive testing and validation processes</li>
+                <li><strong>Change Management:</strong> Proper procedures for handling scope and requirement changes</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">🎯 In-Class Activities</h2>
+        <div class="time-indicator">⏱️ 75 minutes</div>
+
+        <div class="activity-box">
+            <div class="activity-title">IT Failure Analysis Discussion (20 minutes)</div>
+            <p>Share your researched IT project failures in small groups. For each failure discussed:</p>
+            <ul>
+                <li>What went wrong and why?</li>
+                <li>Which SDLC phase(s) had the most problems?</li>
+                <li>How could different methodology have helped?</li>
+                <li>What early warning signs were ignored?</li>
+                <li>What lessons can we apply to our own projects?</li>
+            </ul>
+            <a href="https://codesandbox.io/s/failure-analysis-template-eu" class="btn" target="_blank">Analysis Template</a>
+        </div>
+
+        <div class="activity-box">
+            <div class="activity-title">Pine Valley Furniture Case Analysis (25 minutes)</div>
+            <div class="case-study">
+                <h4>🏢 Pine Valley Furniture Company</h4>
+                <p><strong>Background:</strong> Traditional furniture manufacturer founded in 1985, expanding into e-commerce and modern retail channels.</p>
+                
+                <p><strong>Current Challenge:</strong> Outdated inventory management system causing:</p>
+                <ul>
+                    <li>Stock discrepancies between stores and warehouses</li>
+                    <li>Delayed customer orders and delivery issues</li>
+                    <li>Inability to track real-time inventory levels</li>
+                    <li>Poor integration with new online sales platform</li>
+                </ul>
+
+                <p><strong>Analysis Questions:</strong></p>
+                <ol>
+                    <li>What are the primary business problems to solve?</li>
+                    <li>Who are the key stakeholders?</li>
+                    <li>What are the requirements for a new system?</li>
+                    <li>What SDLC approach would you recommend and why?</li>
+                    <li>What are the major risks and how would you mitigate them?</li>
+                </ol>
+            </div>
+            <a href="https://codesandbox.io/s/pvf-case-analysis-eu" class="btn" target="_blank">Digital Analysis Workspace</a>
+        </div>
+
+        <div class="activity-box">
+            <div class="activity-title">Team Formation Workshop (30 minutes)</div>
+            <div class="team-formation">
+                <h4>🤝 Building Effective Project Teams</h4>
+                
+                <p><strong>Team Composition Guidelines:</strong></p>
+                <ul>
+                    <li><strong>Size:</strong> 4-5 members optimal for collaboration and accountability</li>
+                    <li><strong>Skills Mix:</strong> Diverse technical, analytical, and communication skills</li>
+                    <li><strong>Complementary Strengths:</strong> Different perspectives and problem-solving approaches</li>
+                    <li><strong>Shared Commitment:</strong> Similar availability and dedication levels</li>
+                </ul>
+
+                <p><strong>Team Formation Process:</strong></p>
+                <ol>
+                    <li><strong>Skill Assessment:</strong> Complete individual skills inventory</li>
+                    <li><strong>Speed Networking:</strong> 5-minute conversations with potential teammates</li>
+                    <li><strong>Team Assembly:</strong> Form teams based on complementary skills</li>
+                    <li><strong>Charter Development:</strong> Create preliminary team charter</li>
+                </ol>
+
+                <a href="https://codesandbox.io/s/skills-inventory-eu" class="btn" target="_blank">Skills Assessment</a>
+                <a href="https://codesandbox.io/s/team-charter-template-eu" class="btn btn-success" target="_blank">Team Charter Template</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">🚀 Capstone Project Preview</h2>
+        <div class="capstone-preview">
+            <h4>📋 Semester-Long Capstone Project Overview</h4>
+            
+            <p><strong>Project Goal:</strong> Complete end-to-end systems development project from initial planning through implementation prototype</p>
+
+            <p><strong>Project Options:</strong></p>
+            <ul>
+                <li><strong>Option A:</strong> Solve a real problem for a local organization</li>
+                <li><strong>Option B:</strong> Develop a solution for Evangel University</li>
+                <li><strong>Option C:</strong> Create an innovative system for a simulated business scenario</li>
+            </ul>
+
+            <p><strong>Deliverables Throughout Semester:</strong></p>
+            <ul>
+                <li>Week 3: Project Charter and Initial Requirements</li>
+                <li>Week 6: Complete Requirements Analysis and System Design</li>
+                <li>Week 9: Database Design and User Interface Prototypes</li>
+                <li>Week 12: Working System Prototype</li>
+                <li>Week 15: Final Presentation and Documentation</li>
+            </ul>
+
+            <p><strong>Potential Project Ideas:</strong></p>
+            <ul>
+                <li>Student organization management system</li>
+                <li>Campus event planning and promotion platform</li>
+                <li>Local business inventory management system</li>
+                <li>Community volunteer coordination system</li>
+                <li>Academic advisor scheduling system</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">📝 Week 1 Wrap-Up Assignments</h2>
+        <div class="assignment-highlight">
+            <h4>Assignment 1.3: Systems Analysis Portfolio Project (Team)</h4>
+            <p><strong>Due:</strong> End of Week 1 (Friday, 11:59 PM)</p>
+            <p><strong>Points:</strong> 35</p>
+            
+            <p>Complete your team formation and submit your initial capstone project proposal.</p>
+            
+            <h5>Required Deliverables:</h5>
+            <ol>
+                <li><strong>Team Registration:</strong>
+                    <ul>
+                        <li>Team name and member list</li>
+                        <li>Contact information for all members</li>
+                        <li>Individual skills assessment results</li>
+                        <li>Meeting schedule and communication plan</li>
+                    </ul>
+                </li>
+                <li><strong>Initial Project Proposal:</strong>
+                    <ul>
+                        <li>Problem statement (1-2 paragraphs)</li>
+                        <li>Proposed solution overview</li>
+                        <li>Key stakeholders identified</li>
+                        <li>High-level requirements (5-10 items)</li>
+                        <li>Success criteria and evaluation metrics</li>
+                    </ul>
+                </li>
+                <li><strong>Team Charter:</strong>
+                    <ul>
+                        <li>Team goals and objectives</li>
+                        <li>Individual roles and responsibilities</li>
+                        <li>Work standards and quality expectations</li>
+                        <li>Meeting protocols and communication guidelines</li>
+                        <li>Conflict resolution procedures</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <a href="https://codesandbox.io/s/portfolio-project-template-eu" class="btn" target="_blank">Portfolio Template</a>
+            <a href="#" class="btn btn-secondary">Team Registration Form</a>
+        </div>
+
+        <div class="assignment-highlight">
+            <h4>⏰ Assignment 1.2 Reminder</h4>
+            <p><strong>Due:</strong> End of Week 1 (Friday, 11:59 PM)</p>
+            <p>Don't forget to complete your individual Methodology Selection Case Study for Pine Valley Furniture Company.</p>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">🔍 Week 1 Knowledge Check</h2>
+        <div class="activity-box">
+            <p>Complete this comprehensive review of Week 1 concepts:</p>
+            <ol>
+                <li>How do the characteristics of information systems apply to real-world examples?</li>
+                <li>What role does methodology selection play in project success or failure?</li>
+                <li>How do stakeholder involvement and communication affect system development outcomes?</li>
+                <li>What are the critical success factors for team-based development projects?</li>
+                <li>How can lessons from project failures inform better development practices?</li>
+            </ol>
+            <a href="https://codesandbox.io/s/week1-comprehensive-review-eu" class="btn" target="_blank">Week 1 Portfolio Reflection</a>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">🔗 Looking Ahead to Week 2</h2>
+        <div class="resource-links">
+            <h4>Week 2 Preview: Software Origins and Acquisition</h4>
+            <p>Next week we'll explore different sources of software and the strategic decisions organizations make about building vs. buying information systems.</p>
+            
+            <p><strong>Prepare for Week 2:</strong></p>
+            <ul>
+                <li>Read Chapter 2: The Origins of Software (pages 47-63)</li>
+                <li>Research one make-vs-buy decision case study</li>
+                <li>Complete Week 1 assignments</li>
+                <li>Schedule first team meeting for capstone project</li>
+            </ul>
+
+            <p><strong>Week 2 Topics:</strong></p>
+            <ul>
+                <li>Software acquisition strategies</li>
+                <li>Make vs. buy decision processes</li>
+                <li>Enterprise resource planning (ERP) systems</li>
+                <li>Technology assessment for your capstone project</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="nav-buttons">
+        <a href="#" class="btn btn-secondary">← Day 2: SDLC Methodologies</a>
+        <a href="#" class="btn">Week 2: Software Origins →</a>
+    </div>
+
+    <div class="content-section" style="text-align: center; color: #6b7280; font-size: 14px;">
+        <p>Evangel University | Systems Analysis and Design | Week 1, Day 3</p>
+        <p>🎉 Congratulations on completing Week 1! You've built the foundation for your systems development journey.</p>
+    </div>
+</body>
+</html>
