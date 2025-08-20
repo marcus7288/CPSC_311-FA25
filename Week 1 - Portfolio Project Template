@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systems Analysis Portfolio Project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(45deg, #8B5CF6, #A855F7);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            padding: 25px;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            background: #f8f9fa;
+        }
+        
+        .section h3 {
+            color: #8B5CF6;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            border-bottom: 2px solid #8B5CF6;
+            padding-bottom: 5px;
+        }
+        
+        .portfolio-textarea {
+            width: 100%;
+            min-height: 150px;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            resize: vertical;
+        }
+        
+        .portfolio-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .btn {
+            background: linear-gradient(45deg, #8B5CF6, #A855F7);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s;
+            margin: 10px 5px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
+        }
+        
+        .progress-bar {
+            background: #e9ecef;
+            border-radius: 10px;
+            height: 20px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            background: linear-gradient(45deg, #8B5CF6, #A855F7);
+            height: 100%;
+            transition: width 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        
+        .tips-box {
+            background: #e7f3ff;
+            border-left: 4px solid #0066cc;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .tips-box h4 {
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+        
+        .word-count {
+            font-size: 12px;
+            color: #666;
+            text-align: right;
+            margin-top: 5px;
+        }
+        
+        .section-status {
+            float: right;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        
+        .status-complete {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status-incomplete {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .export-section {
+            background: #f1f3f4;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border: 2px dashed #8B5CF6;
+        }
+        
+        .reflection-prompts {
+            background: #fff8e1;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .learning-objectives {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .objective-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #8B5CF6;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .objective-card input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Systems Analysis Portfolio Project</h1>
+            <p>Week 1 Assignment 1.3 - Building Your Learning Portfolio</p>
+        </div>
+        
+        <div class="content">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar" style="width: 0%;">0% Complete</div>
+            </div>
+            
+            <div class="section">
+                <h3>🎯 Learning Objectives Assessment <span class="section-status" id="status-objectives">Incomplete</span></h3>
+                
+                <p>Check off each learning objective as you feel confident you've achieved it:</p>
+                
+                <div class="learning-objectives">
+                    <div class="objective-card">
+                        <input type="checkbox" id="obj1" onchange="updateProgress()">
+                        <label for="obj1">Define systems and information systems with their key characteristics</label>
+                    </div>
+                    <div class="objective-card">
+                        <input type="checkbox" id="obj2" onchange="updateProgress()">
+                        <label for="obj2">Explain the role of systems analysts in modern organizations</label>
+                    </div>
+                    <div class="objective-card">
+                        <input type="checkbox" id="obj3" onchange="updateProgress()">
+                        <label for="obj3">Describe the five phases of the SDLC</label>
+                    </div>
+                    <div class="objective-card">
+                        <input type="checkbox" id="obj4" onchange="updateProgress()">
+                        <label for="obj4">Compare traditional and agile development methodologies</label>
+                    </div>
+                    <div class="objective-card">
+                        <input type="checkbox" id="obj5" onchange="updateProgress()">
+                        <label for="obj5">Analyze real-world systems using course concepts</label>
+                    </div>
+                    <div class="objective-card">
+                        <input type="checkbox" id="obj6" onchange="updateProgress()">
+                        <label for="obj6">Form effective project teams for capstone work</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>🔍 Key Concepts Reflection <span class="section-status" id="status-concepts">Incomplete</span></h3>
+                
+                <div class="reflection-prompts">
+                    <h4>💡 Reflection Prompts:</h4>
+                    <ul>
+                        <li>What is the most important characteristic of an information system?</li>
+                        <li>How does the systems analyst role differ from other IT roles?</li>
+                        <li>Which SDLC phase do you think is most critical and why?</li>
+                        <li>When would you choose agile vs. traditional methodology?</li>
+                    </ul>
+                </div>
+                
+                <textarea class="portfolio-textarea" id="conceptsReflection" 
+                    placeholder="Write your reflection on the key concepts from Week 1 (minimum 300 words)..."
+                    oninput="updateWordCount('conceptsReflection', 'conceptsCount'); updateProgress()"></textarea>
+                <div class="word-count" id="conceptsCount">0 words</div>
+            </div>
+            
+            <div class="section">
+                <h3>💼 Systems in My Life Analysis <span class="section-status" id="status-systems">Incomplete</span></h3>
+                
+                <div class="tips-box">
+                    <h4>📋 Analysis Framework:</h4>
+                    <p>Reference your Personal Systems Inventory from Assignment 1.1. Analyze patterns, dependencies, and insights about the systems you interact with daily.</p>
+                </div>
+                
+                <textarea class="portfolio-textarea" id="systemsAnalysis" 
+                    placeholder="Analyze the systems from your personal inventory. Discuss patterns, critical dependencies, failure impacts, and integration points (minimum 250 words)..."
+                    oninput="updateWordCount('systemsAnalysis', 'systemsCount'); updateProgress()"></textarea>
+                <div class="word-count" id="systemsCount">0 words</div>
+            </div>
+            
+            <div class="section">
+                <h3>🤝 Team Formation Experience <span class="section-status" id="status-team">Incomplete</span></h3>
+                
+                <input type="text" class="portfolio-input" id="teamName" 
+                    placeholder="Team Name" onchange="updateProgress()">
+                
+                <textarea class="portfolio-textarea" id="teamReflection" 
+                    placeholder="Reflect on your team formation experience. What strengths does each member bring? What challenges do you anticipate? How will you ensure effective collaboration? (minimum 200 words)..."
+                    oninput="updateWordCount('teamReflection', 'teamCount'); updateProgress()"></textarea>
+                <div class="word-count" id="teamCount">0 words</div>
+            </div>
+            
+            <div class="section">
+                <h3>🚀 Capstone Project Vision <span class="section-status" id="status-capstone">Incomplete</span></h3>
+                
+                <div class="tips-box">
+                    <h4>🎯 Project Vision Elements:</h4>
+                    <ul>
+                        <li>What problem will your team solve?</li>
+                        <li>Who are the potential users/stakeholders?</li>
+                        <li>What type of system are you considering?</li>
+                        <li>What makes this project valuable?</li>
+                    </ul>
+                </div>
+                
+                <input type="text" class="portfolio-input" id="projectTitle" 
+                    placeholder="Preliminary Project Title" onchange="updateProgress()">
+                
+                <textarea class="portfolio-textarea" id="projectVision" 
+                    placeholder="Describe your preliminary vision for the capstone project. What problem will you solve and why is it important? (minimum 200 words)..."
+                    oninput="updateWordCount('projectVision', 'projectCount'); updateProgress()"></textarea>
+                <div class="word-count" id="projectCount">0 words</div>
+            </div>
+            
+            <div class="section">
+                <h3>📈 Learning Goals and Next Steps <span class="section-status" id="status-goals">Incomplete</span></h3>
+                
+                <div class="reflection-prompts">
+                    <h4>🎯 Consider These Questions:</h4>
+                    <ul>
+                        <li>What are your specific learning goals for this course?</li>
+                        <li>What skills do you want to develop?</li>
+                        <li>How will you apply course concepts to your career goals?</li>
+                        <li>What do you want to achieve with your capstone project?</li>
+                    </ul>
+                </div>
+                
+                <textarea class="portfolio-textarea" id="learningGoals" 
+                    placeholder="Set your learning goals for the course and describe how you plan to achieve them (minimum 200 words)..."
+                    oninput="updateWordCount('learningGoals', 'goalsCount'); updateProgress()"></textarea>
+                <div class="word-count" id="goalsCount">0 words</div>
+            </div>
+            
+            <div class="export-section">
+                <h3>📤 Export Portfolio</h3>
+                <p>Once you've completed all sections, export your portfolio for submission:</p>
+                
+                <button class="btn" onclick="exportPortfolio()">Generate Portfolio Report</button>
+                <button class="btn" onclick="saveProgress()">Save Progress Locally</button>
+                
+                <div id="exportArea" style="display: none; margin-top: 20px;">
+                    <h4>Your Complete Portfolio Report:</h4>
+                    <textarea id="exportText" readonly style="width: 100%; height: 300px; border: none; background: #f8f9fa; font-family: monospace; padding: 15px;"></textarea>
+                    <p style="margin-top: 10px; font-size: 14px; color: #666;">
+                        Copy this text and paste it into a Word document for submission via Canvas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateWordCount(textareaId, countId) {
+            const textarea = document.getElementById(textareaId);
+            const words = textarea.value.trim().split(/\\s+/).filter(word => word.length > 0);
+            document.getElementById(countId).textContent = `${words.length} words`;
+        }
+
+        function updateProgress() {
+            // Check objectives
+            const objectives = document.querySelectorAll('input[type="checkbox"]');
+            const objectivesCompleted = Array.from(objectives).filter(cb => cb.checked).length;
+            const objectivesTotal = objectives.length;
+            
+            // Check text requirements
+            const sections = [
+                { id: 'conceptsReflection', min: 300, status: 'status-concepts' },
+                { id: 'systemsAnalysis', min: 250, status: 'status-systems' },
+                { id: 'teamReflection', min: 200, status: 'status-team' },
+                { id: 'projectVision', min: 200, status: 'status-capstone' },
+                { id: 'learningGoals', min: 200, status: 'status-goals' }
+            ];
+            
+            let completedSections = 0;
+            sections.forEach(section => {
+                const textarea = document.getElementById(section.id);
+                const words = textarea.value.trim().split(/\\s+/).filter(word => word.length > 0);
+                const isComplete = words.length >= section.min;
+                
+                const statusElement = document.getElementById(section.status);
+                if (isComplete) {
+                    statusElement.textContent = 'Complete';
+                    statusElement.className = 'section-status status-complete';
+                    completedSections++;
+                } else {
+                    statusElement.textContent = 'Incomplete';
+                    statusElement.className = 'section-status status-incomplete';
+                }
+            });
+            
+            // Check team name and project title
+            const teamName = document.getElementById('teamName').value.trim();
+            const projectTitle = document.getElementById('projectTitle').value.trim();
+            
+            if (teamName) completedSections += 0.5;
+            if (projectTitle) completedSections += 0.5;
+            
+            // Update objectives status
+            const objectivesStatus = document.getElementById('status-objectives');
+            if (objectivesCompleted === objectivesTotal) {
+                objectivesStatus.textContent = 'Complete';
+                objectivesStatus.className = 'section-status status-complete';
+                completedSections++;
+            } else {
+                objectivesStatus.textContent = 'Incomplete';
+                objectivesStatus.className = 'section-status status-incomplete';
+            }
+            
+            // Calculate overall progress
+            const totalSections = 6; // objectives + 5 text sections
+            const progress = Math.round((completedSections / totalSections) * 100);
+            
+            const progressBar = document.getElementById('progressBar');
+            progressBar.style.width = `${progress}%`;
+            progressBar.textContent = `${progress}% Complete`;
+        }
+
+        function exportPortfolio() {
+            const now = new Date();
+            const studentName = prompt("Enter your name for the portfolio header:") || "Student";
+            
+            let portfolio = `SYSTEMS ANALYSIS & DESIGN PORTFOLIO
+Week 1: Foundations for Systems Development
+Student: ${studentName}
+Date: ${now.toLocaleDateString()}
+Course: Systems Analysis and Design
+${"=".repeat(60)}
+
+LEARNING OBJECTIVES ASSESSMENT:
+`;
+            
+            const objectives = document.querySelectorAll('input[type="checkbox"]');
+            objectives.forEach((cb, index) => {
+                const label = cb.nextElementSibling.textContent;
+                portfolio += `${cb.checked ? '✓' : '✗'} ${label}\\n`;
+            });
+            
+            portfolio += `\\nKEY CONCEPTS REFLECTION:
+${document.getElementById('conceptsReflection').value}
+
+SYSTEMS IN MY LIFE ANALYSIS:
+${document.getElementById('systemsAnalysis').value}
+
+TEAM FORMATION EXPERIENCE:
+Team Name: ${document.getElementById('teamName').value}
+${document.getElementById('teamReflection').value}
+
+CAPSTONE PROJECT VISION:
+Project Title: ${document.getElementById('projectTitle').value}
+${document.getElementById('projectVision').value}
+
+LEARNING GOALS AND NEXT STEPS:
+${document.getElementById('learningGoals').value}
+
+${"=".repeat(60)}
+Portfolio completed: ${now.toLocaleString()}
+Ready for submission via Canvas Assignment 1.3
+`;
+            
+            document.getElementById('exportText').value = portfolio;
+            document.getElementById('exportArea').style.display = 'block';
+        }
+
+        function saveProgress() {
+            const portfolioData = {
+                conceptsReflection: document.getElementById('conceptsReflection').value,
+                systemsAnalysis: document.getElementById('systemsAnalysis').value,
+                teamName: document.getElementById('teamName').value,
+                teamReflection: document.getElementById('teamReflection').value,
+                projectTitle: document.getElementById('projectTitle').value,
+                projectVision: document.getElementById('projectVision').value,
+                learningGoals: document.getElementById('learningGoals').value,
+                objectives: Array.from(document.querySelectorAll('input[type="checkbox"]')).map(cb => cb.checked)
+            };
+            
+            const dataStr = JSON.stringify(portfolioData);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(dataBlob);
+            
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'week1_portfolio_progress.json';
+            link.click();
+            
+            alert('Portfolio progress saved! You can load this file later to continue working.');
+        }
+
+        // Initialize word counts and progress
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgress();
+        });
+    </script>
+</body>
+</html>
